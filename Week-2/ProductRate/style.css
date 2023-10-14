@@ -1,0 +1,27 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+label {
+  display: inline-block;
+  width: 120px;
+}
+
+input,
+textarea {
+  width: 300px;
+  padding: 10px;
+}
+
+input[type] {
+  width: auto;
+}
+
+.required::after {
+  content: '*';
+  color: red;
+}
+
+label + input {
+  background-color: rgb(219, 241, 248);
+}

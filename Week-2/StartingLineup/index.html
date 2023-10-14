@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Starting Lineup</title>
+  </head>
+  <body>
+    <h1>Starting Lineup</h1>
+    <fieldset class="input-div">
+      <legend>Status</legend>
+      <input type="radio" id="draft" name="status" value="Draft" />
+      <label for="draft">Draft</label>
+      <input type="radio" id="final" name="status" value="Final" checked />
+      <label for="final">Final</label>
+    </fieldset>
+
+    <div class="input-div">
+      <label for="date">Date: </label>
+      <select name="cars" id="cars">
+        <option value="March 20">March 20</option>
+        <option value="March 24">March 24</option>
+        <option value="April 2">April 2</option>
+        <option value="April 6">April 2</option>
+        <option value="April 13">April 13</option>
+      </select>
+    </div>
+
+    <fieldset class="input-div">
+      <legend>Players</legend>
+      <input type="checkbox" id="aarav" name="players" value="Aarav Agarwal" />
+      <label for="aarav">Aarav Agarwal</label>
+      <br />
+      <input type="checkbox" id="ava" name="players" value="Ava Johnson" />
+      <label for="ava">Ava Johnson</label>
+      <br />
+      <input type="checkbox" id="julio" name="players" value="Julio Ortiz" />
+      <label for="julio">Julio Ortiz</label>
+      <br />
+      <input type="checkbox" id="liam" name="players" value="Liam Rubio" />
+      <label for="liam">Liam Rubio</label>
+      <br />
+      <input
+        type="checkbox"
+        id="emma"
+        name="players"
+        value="Emma Witherspoon"
+      />
+      <label for="emma">Emma Witherspoon</label>
+    </fieldset>
+  </body>
+</html>

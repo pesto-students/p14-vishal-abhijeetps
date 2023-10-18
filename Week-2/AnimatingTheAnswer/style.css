@@ -1,0 +1,46 @@
+body {
+  font-family: Calibri, sans-serif;
+  font-size: 3em;
+}
+
+#answer {
+  color: red;
+  width: 100px;
+
+  /* Part of your solution goes here */
+  animation-name: answer-anime;
+  animation-delay: 1s;
+  animation-duration: 2s;
+}
+
+@keyframes answer-anime {
+  0% {
+    color: yellow;
+    transform: translateX(-200px) translateY(40px);
+  }
+  50% {
+    color: orange;
+    transform: translateX(0px) translateY(40px);
+  }
+  100% {
+    color: red;
+    transform: translateX(0px) translateY(0px);
+  }
+}
+
+/* moveFraction goes here */
+
+#question {
+  /* Part of your solution goes here */
+  transition: transform 1s;
+  transition-timing-function: ease-in-out;
+}
+
+#question:hover {
+  /* Part of your solution goes here */
+  transform: scale(0.9);
+}
+
+span {
+  display: inline-block;
+}

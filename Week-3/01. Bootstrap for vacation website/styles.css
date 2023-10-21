@@ -54,6 +54,10 @@ nav {
   font-size: larger;
 }
 
+.nav-link {
+  color: var(--link-font-color);
+}
+
 main {
   margin: 0;
 }

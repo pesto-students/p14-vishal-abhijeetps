@@ -1,3 +1,5 @@
+// Inheritance
+
 class Vehicle {
   constructor(make, model, year, color) {
     this.make = make;
@@ -24,3 +26,40 @@ class RideShareCar extends Car {
   }
 }
 
+
+// Polymorphism
+class Shape {
+  constructor() {}
+  calculateArea() {}
+}
+
+class Rectangle extends Shape {
+  constructor() {
+    super();
+  }
+  calculateArea(width, height) {
+    return width * height;
+  }
+}
+
+class Triangle extends Shape {
+  constructor() {
+    super();
+  }
+  calculateArea(base, height) {
+    return 0.5 * base * height;
+  }
+}
+
+class Circle extends Shape {
+  constructor() {
+    super();
+  }
+  calculateArea(radius) {
+    return Math.PI * radius * radius;
+  }
+}
+
+console.log(new Rectangle().calculateArea(5, 4));
+console.log(new Triangle().calculateArea(3, 4));
+console.log(new Circle().calculateArea(5));

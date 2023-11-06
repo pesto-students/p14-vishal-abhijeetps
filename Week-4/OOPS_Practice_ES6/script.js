@@ -26,7 +26,6 @@ class RideShareCar extends Car {
   }
 }
 
-
 // Polymorphism
 class Shape {
   constructor() {}
@@ -63,3 +62,69 @@ class Circle extends Shape {
 console.log(new Rectangle().calculateArea(5, 4));
 console.log(new Triangle().calculateArea(3, 4));
 console.log(new Circle().calculateArea(5));
+
+// Abstraction and Encapsulation
+class BankAccount {
+  #accountNumber;
+  #balance = 0;
+  #accountHolderName;
+  constructor() {}
+
+  get getBalance() {
+    return this.#balance;
+  }
+
+  deposit(amount) {
+    this.#balance = this.#balance + amount;
+  }
+  withdraw(amount, accountType = 'checking') {
+    if (accountType === 'savings' && this.#balance - amount < 0) {
+      return;
+    }
+    this.#balance = this.#balance - amount;
+  }
+}
+
+class CheckingAccount extends BankAccount {
+  constructor() {
+    super();
+  }
+  deposit(amount) {
+    super.deposit(amount);
+  }
+  withdraw(amount) {
+    super.withdraw(amount);
+  }
+  getBalance() {
+    return super.getBalance;
+  }
+}
+
+class SavingsAccount extends BankAccount {
+  constructor() {
+    super();
+  }
+  deposit(amount) {
+    super.deposit(amount);
+  }
+  withdraw(amount) {
+    super.withdraw(amount, 'savings');
+  }
+  getBalance() {
+    return super.getBalance;
+  }
+}
+
+const checking = new CheckingAccount();
+checking.deposit(1000);
+console.log(checking.getBalance());
+checking.withdraw(1200);
+console.log(checking.getBalance());
+
+const savings = new SavingsAccount();
+savings.deposit(1000);
+console.log(savings.getBalance());
+savings.withdraw(1200);
+console.log(savings.getBalance());
+savings.withdraw(800);
+console.log(savings.getBalance());

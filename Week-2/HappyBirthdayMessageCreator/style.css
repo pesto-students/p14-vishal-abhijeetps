@@ -1,0 +1,10 @@
+.left-label {
+  width: 160px;
+  min-width: 160px;
+  display: inline-block;
+}
+
+.input-div {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}

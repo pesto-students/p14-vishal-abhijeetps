@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Happy Birthday Message Creator</title>
+  </head>
+  <body>
+    <main>
+      <h1>Happy Birthday Message Creator</h1>
+      <form action="" method="post">
+        <div class="input-div">
+          <label for="message" class="left-label">Message?</label>
+          <input
+            id="message"
+            name="message"
+            type="text"
+            value="Happy birthday!"
+          />
+        </div>
+
+        <div class="input-div">
+          <label for="email" class="left-label">Email address?</label>
+          <input
+            id="email"
+            type="email"
+            pattern="[a-zA-Z0-9-_.]+@[a-zA-Z0-9-]+(?:.[a-zA-Z0- 9-]+)*"
+            placeholder="name@domain.com"
+            name="email"
+          />
+        </div>
+
+        <div class="input-div">
+          <label for="date" class="left-label">Date to send?</label>
+          <input id="date" type="date" name="date" />
+        </div>
+
+        <div class="input-div">
+          <label for="color" class="left-label">Message color?</label>
+          <input id="color" type="color" name="color" />
+        </div>
+
+        <div class="input-div">
+          <label for="blinks" class="left-label">Number of blinks?</label>
+          <input id="blinks" type="number" value="0" name="blinks" />
+        </div>
+
+        <div class="input-div">
+          <label for="volume" class="left-label">Music Volume?</label>
+          <input
+            id="volume"
+            type="range"
+            min="0"
+            max="10"
+            value="4"
+            name="volume"
+          />
+        </div>
+
+        <div class="input-div">
+          <button type="submit">Send Birthday Message</button>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>
